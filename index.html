@@ -148,6 +148,16 @@ if (reversed == null) { reversed = false; }
 		document.title = "Party Kitties";
 		document.body.style.backgroundColor = "#0066FF";
 		document.body.style.margin = "0";
+		// Ícone da aba (logo.png na mesma pasta)
+		var iconesAntigos = document.querySelectorAll("link[rel*='icon']");
+		for (var i = 0; i < iconesAntigos.length; i++) {
+		    iconesAntigos[i].parentNode.removeChild(iconesAntigos[i]);
+		}
+		var icone = document.createElement("link");
+		icone.rel = "icon";
+		icone.type = "image/png";
+		icone.href = "logo.png";
+		document.head.appendChild(icone);
 		// Scroll
 		document.documentElement.style.overflowY = "auto";
 		document.body.style.overflowY = "auto";
