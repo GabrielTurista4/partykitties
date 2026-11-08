@@ -27,7 +27,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"index_atlas_1", frames: [[0,320,597,85],[0,407,567,85],[0,0,507,225],[0,227,586,91],[509,0,285,61]]}
+		{name:"index_atlas_1", frames: [[0,825,597,85],[0,912,567,85],[0,505,507,225],[0,732,586,91],[0,999,285,61],[0,0,697,503]]}
 ];
 (lib.AnMovieClip = function(){
 	this.actionFrames = [];
@@ -75,9 +75,9 @@ p.nominalBounds = new cjs.Rectangle(0,0,1072,116);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 (lib.logo = function() {
-	this.initialize(img.logo);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1280,720);
+	this.initialize(ss["index_atlas_1"]);
+	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
 // stage content:
 (lib.index = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
@@ -164,7 +164,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_6 = new lib.CachedBmp_1();
 	this.instance_6.setTransform(392.3,656.85,0.5,0.5);
 	this.instance_7 = new lib.logo();
-	this.instance_7.setTransform(0,0,0.076,0.076);
+	this.instance_7.setTransform(0,0,0.2564,0.2564);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 	this._renderFirstFrame();
 }).prototype = p = new lib.AnMovieClip();
@@ -180,7 +180,6 @@ lib.properties = {
 	manifest: [
 		{src:"images/CachedBmp_7.png", id:"CachedBmp_7"},
 		{src:"images/CachedBmp_3.png", id:"CachedBmp_3"},
-		{src:"images/logo.png", id:"logo"},
 		{src:"images/index_atlas_1.png", id:"index_atlas_1"}
 	],
 	preloads: []
